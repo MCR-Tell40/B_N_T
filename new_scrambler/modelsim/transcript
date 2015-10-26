@@ -1,0 +1,376 @@
+# //  ModelSim SE-64 10.3a Apr 13 2014 Linux 3.10.0-229.14.1.el7.x86_64
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project new_scrambler
+project open /home/velo/Documents/new_scrambler/modelsim/new_scrambler
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -t ps -novopt work.scrambler_top
+# vsim -t ps -novopt work.scrambler_top
+# Start time: 15:01:16 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 15:01:30 on Oct 05,2015, Elapsed time: 0: 0:14
+# Start time: 15:01:30 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 12500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 1  Instance: /scrambler_top/RX
+# {0 ps} {21 ns}
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 15:20:54 on Oct 05,2015, Elapsed time: 0:19:24
+# Start time: 15:20:54 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 12500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 1  Instance: /scrambler_top/RX
+# {0 ps} {21 ns}
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 15:21:32 on Oct 05,2015, Elapsed time: 0: 0:38
+# Start time: 15:21:32 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 12500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 1  Instance: /scrambler_top/RX
+# {0 ps} {21 ns}
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 15:31:56 on Oct 05,2015, Elapsed time: 0:10:24
+# Start time: 15:31:56 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 12500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 1  Instance: /scrambler_top/RX
+# {0 ps} {21 ns}
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 15:36:58 on Oct 05,2015, Elapsed time: 0: 5: 2
+# Start time: 15:36:58 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 3 ns  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 9250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 111100010010001101000101011001
+#    Time: 15500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=XXXX000X00X000XX0X000X0X0XX00X
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# {0 ps} {21 ns}
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 15:41:24 on Oct 05,2015, Elapsed time: 0: 4:26
+# Start time: 15:41:24 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 12500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 1  Instance: /scrambler_top/RX
+# {0 ps} {21 ns}
+run 20ns
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 25 ns  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 25 ns  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 31250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 31250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 37500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 37500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 15:48:02 on Oct 05,2015, Elapsed time: 0: 6:38
+# Start time: 15:48:02 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 12500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 1  Instance: /scrambler_top/RX
+# {0 ps} {21 ns}
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 16:07:41 on Oct 05,2015, Elapsed time: 0:19:39
+# Start time: 16:07:41 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 12500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=00000X00X000XX0X000X0X0XX00XXX
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 1  Instance: /scrambler_top/RX
+# {0 ps} {21 ns}
+# Compile of gwt_rx_descrambler_30bit_new.vhd was successful.
+# Compile of gwt_tx_scrambler_30bit_new.vhd was successful.
+# Compile of scrambler_top.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+source parameters.tcl
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.scrambler_top(a)
+# Loading work.scrambler_top(a)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Refreshing /home/velo/Documents/new_scrambler/modelsim/work.gwt_rx_descrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# vsim -c -t ps -novopt work.scrambler_top
+# End time: 16:33:14 on Oct 05,2015, Elapsed time: 0:25:33
+# Start time: 16:33:14 on Oct 05,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.scrambler_top(a)
+# Loading work.gwt_tx_scrambler_30bit_new(behavioral)
+# Loading work.gwt_rx_descrambler_30bit_new(behavioral)
+# ** Note: ========== Reset asserted (RX_descrambler) ===================
+#    Time: 0 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000000000000000000000000000000
+#    Time: 6250 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000000000000000000000000000000
+#    Time: 12500 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 12500 ps  Iteration: 1  Instance: /scrambler_top/RX
+# ** Note: data_output_reg=000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 0  Instance: /scrambler_top
+# ** Note: rx_data_temp = 000001001000110100010101100111
+#    Time: 18750 ps  Iteration: 1  Instance: /scrambler_top/RX
+# {0 ps} {21 ns}
+# End time: 16:36:07 on Oct 05,2015, Elapsed time: 0: 2:53
+# Errors: 0, Warnings: 1

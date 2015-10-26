@@ -1,0 +1,311 @@
+Analysis & Synthesis report for Scrambler
+Fri Oct  2 15:13:18 2015
+Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Oct  2 15:13:18 2015       ;
+; Quartus II 64-Bit Version       ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
+; Revision Name                   ; Scrambler                                   ;
+; Top-level Entity Name           ; Scrambler                                   ;
+; Family                          ; Stratix V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 90                                          ;
+; Total pins                      ; 154                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI STD RX PCSs          ; 0                                           ;
+; Total HSSI 10G RX PCSs          ; 0                                           ;
+; Total HSSI GEN3 RX PCSs         ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI STD TX PCSs          ; 0                                           ;
+; Total HSSI 10G TX PCSs          ; 0                                           ;
+; Total HSSI GEN3 TX PCSs         ; 0                                           ;
+; Total HSSI TX Channels          ; 0                                           ;
+; Total HSSI PIPE GEN1_2s         ; 0                                           ;
+; Total HSSI GEN3s                ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5SGXEA7H3F35C3     ;                    ;
+; Top-level entity name                                                           ; Scrambler          ; Scrambler          ;
+; Family name                                                                     ; Stratix V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+; gwt_rx_descrambler_30bit_new.vhd ; yes             ; User VHDL File                     ; /home/velo/Documents/new_scrambler/quartus/gwt_rx_descrambler_30bit_new.vhd ;         ;
+; gwt_tx_scrambler_30bit_new.vhd   ; yes             ; User VHDL File                     ; /home/velo/Documents/new_scrambler/quartus/gwt_tx_scrambler_30bit_new.vhd   ;         ;
+; Scrambler.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/velo/Documents/new_scrambler/quartus/Scrambler.bdf                    ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimate of Logic utilization (ALMs needed) ; 66              ;
+;                                             ;                 ;
+; Combinational ALUT usage for logic          ; 120             ;
+;     -- 7 input functions                    ; 0               ;
+;     -- 6 input functions                    ; 2               ;
+;     -- 5 input functions                    ; 0               ;
+;     -- 4 input functions                    ; 58              ;
+;     -- <=3 input functions                  ; 60              ;
+;                                             ;                 ;
+; Dedicated logic registers                   ; 90              ;
+;                                             ;                 ;
+; I/O pins                                    ; 154             ;
+; Total DSP Blocks                            ; 0               ;
+; Maximum fan-out node                        ; pin_name4~input ;
+; Maximum fan-out                             ; 90              ;
+; Total fan-out                               ; 908             ;
+; Average fan-out                             ; 1.75            ;
++---------------------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
++----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------+--------------+
+; |Scrambler                             ; 120 (0)           ; 90 (0)       ; 0                 ; 0          ; 154  ; 0            ; |Scrambler                                   ; work         ;
+;    |gwt_rx_descrambler_30bit_new:inst| ; 30 (30)           ; 60 (60)      ; 0                 ; 0          ; 0    ; 0            ; |Scrambler|gwt_rx_descrambler_30bit_new:inst ; work         ;
+;    |gwt_tx_scrambler_30bit_new:inst2|  ; 90 (90)           ; 30 (30)      ; 0                 ; 0          ; 0    ; 0            ; |Scrambler|gwt_tx_scrambler_30bit_new:inst2  ; work         ;
++----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 90    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 60    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+    Info: Processing started: Fri Oct  2 15:13:14 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Scrambler -c Scrambler
+Info (20034): Auto device selection is not supported for Stratix V device family. The default device, 5SGXEA7H3F35C3, is set.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file gwt_rx_descrambler_30bit_new.vhd
+    Info (12022): Found design unit 1: gwt_rx_descrambler_30bit_new-behavioral
+    Info (12023): Found entity 1: gwt_rx_descrambler_30bit_new
+Info (12021): Found 2 design units, including 1 entities, in source file gwt_tx_scrambler_30bit_new.vhd
+    Info (12022): Found design unit 1: gwt_tx_scrambler_30bit_new-behavioral
+    Info (12023): Found entity 1: gwt_tx_scrambler_30bit_new
+Info (12021): Found 1 design units, including 1 entities, in source file Scrambler.bdf
+    Info (12023): Found entity 1: Scrambler
+Info (12127): Elaborating entity "Scrambler" for the top level hierarchy
+Info (12128): Elaborating entity "gwt_rx_descrambler_30bit_new" for hierarchy "gwt_rx_descrambler_30bit_new:inst"
+Info (12128): Elaborating entity "gwt_tx_scrambler_30bit_new" for hierarchy "gwt_tx_scrambler_30bit_new:inst2"
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[29]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[29]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[29]~1"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[28]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[28]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[28]~5"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[27]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[27]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[27]~9"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[26]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[26]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[26]~13"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[25]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[25]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[25]~17"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[24]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[24]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[24]~21"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[23]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[23]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[23]~25"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[22]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[22]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[22]~29"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[21]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[21]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[21]~33"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[20]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[20]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[20]~37"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[19]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[19]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[19]~41"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[18]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[18]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[18]~45"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[17]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[17]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[17]~49"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[16]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[16]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[16]~53"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[15]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[15]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[15]~57"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[14]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[14]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[14]~61"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[13]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[13]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[13]~65"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[12]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[12]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[12]~69"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[11]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[11]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[11]~73"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[10]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[10]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[10]~77"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[9]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[9]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[9]~81"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[8]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[8]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[8]~85"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[7]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[7]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[7]~89"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[6]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[6]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[6]~93"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[5]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[5]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[5]~97"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[4]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[4]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[4]~101"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[3]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[3]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[3]~105"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[2]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[2]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[2]~109"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[1]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[1]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[1]~113"
+    Warning (13310): Register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[0]" is converted into an equivalent circuit using register "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[0]~_emulated" and latch "gwt_tx_scrambler_30bit_new:inst2|feedbackRegister[0]~117"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 304 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 94 input pins
+    Info (21059): Implemented 60 output pins
+    Info (21061): Implemented 150 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 860 megabytes
+    Info: Processing ended: Fri Oct  2 15:13:18 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,73 @@
+#include "root_transition_chain.h"
+
+int count_data_points()
+{
+  int count(0);
+  while(!un_scrambled_datafile->eof())
+    {
+      string temp;
+      *un_scrambled_datafile >> temp;
+      count++;
+    }
+  un_scrambled_datafile -> seekg (0, un_scrambled_datafile->beg);
+  return count;
+}
+
+void graph_init(int data_points)
+{
+  un_scrambled_graph = new TGraph(data_points);
+  new_scrambled_graph = new TGraph(data_points);
+  old_scrambled_graph = new TGraph(data_points);
+}
+
+void draw_graphs(int data_points)
+{
+  for (int i(0); i < data_points; i++)
+    {
+      string temp;
+      *un_scrambled_datafile >> temp;
+      if (transition_count(str_to_packet(temp)!=0))
+	un_scrambled_graph -> SetPoint(i,i,transition_count(str_to_packet(temp)));
+      *new_scrambled_datafile >> temp;
+      if (transition_count(str_to_packet(temp)!=0))
+	new_scrambled_graph -> SetPoint(i,i,transition_count(str_to_packet(temp)));
+      *old_scrambled_datafile >> temp;
+      if (transition_count(str_to_packet(temp)!=0))
+	old_scrambled_graph -> SetPoint(i,i,transition_count(str_to_packet(temp)));
+    }
+}
+
+packet str_to_packet(string signal)
+{
+  packet _packet = 0;
+    
+  for (int index(1); index <= 128; index++)
+    if (signal[128-index] == '1')
+      _packet[index-1] = 1;
+    
+  return _packet;
+}
+
+int transition_count(packet DATA)
+{
+  int longest_chain(0);
+  int a(0);
+  int b(0);
+  int c(0);
+  for (int i(1); i < 120 ; i++)
+    if (DATA[i] = DATA[i-1])
+      a++;
+
+
+    
+  return count;
+}
+
+void save_graphs()
+{
+  output_file -> cd();
+  un_scrambled_graph -> Write("Un_Scramble");
+  new_scrambled_graph -> Write("New_Scramble");
+  old_scrambled_graph -> Write("Old_Scramble");
+  output_file->Close();
+}

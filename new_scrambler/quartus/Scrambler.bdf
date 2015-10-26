@@ -1,0 +1,353 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 16 56 192 72)
+	(text "INPUT" (rect 133 0 161 9)(font "Arial" (font_size 6)))
+	(text "pin_name1" (rect 9 0 62 10)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 24 88 192 104)
+	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
+	(text "pin_name2" (rect 5 0 59 10)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 8 408 176 424)
+	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
+	(text "pin_name4" (rect 5 0 59 10)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 8 456 176 472)
+	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
+	(text "pin_name7" (rect 5 0 59 10)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -96 112 192 128)
+	(text "INPUT" (rect 245 0 273 9)(font "Arial" (font_size 6)))
+	(text "signal_RX_COMMON_FRAME_I[29..0]" (rect 5 0 194 10)(font "Arial" ))
+	(pt 288 8)
+	(drawing
+		(line (pt 204 12)(pt 229 12))
+		(line (pt 204 4)(pt 229 4))
+		(line (pt 233 8)(pt 288 8))
+		(line (pt 204 12)(pt 204 4))
+		(line (pt 229 4)(pt 233 8))
+		(line (pt 229 12)(pt 233 8))
+	)
+	(text "VCC" (rect 248 7 268 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -96 440 168 456)
+	(text "INPUT" (rect 221 0 249 9)(font "Arial" (font_size 6)))
+	(text "signal_RESET_PATTERN_I[29..0]" (rect 5 0 172 10)(font "Arial" ))
+	(pt 264 8)
+	(drawing
+		(line (pt 180 12)(pt 205 12))
+		(line (pt 180 4)(pt 205 4))
+		(line (pt 209 8)(pt 264 8))
+		(line (pt 180 12)(pt 180 4))
+		(line (pt 205 4)(pt 209 8))
+		(line (pt 205 12)(pt 209 8))
+	)
+	(text "VCC" (rect 224 7 244 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -48 480 168 496)
+	(text "INPUT" (rect 173 0 201 9)(font "Arial" (font_size 6)))
+	(text "signal_TX_DATA_I[29..0]" (rect 5 0 127 10)(font "Arial" ))
+	(pt 216 8)
+	(drawing
+		(line (pt 132 12)(pt 157 12))
+		(line (pt 132 4)(pt 157 4))
+		(line (pt 161 8)(pt 216 8))
+		(line (pt 132 12)(pt 132 4))
+		(line (pt 157 4)(pt 161 8))
+		(line (pt 157 12)(pt 161 8))
+	)
+	(text "VCC" (rect 176 7 196 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 552 88 776 104)
+	(text "OUTPUT" (rect 1 0 39 9)(font "Arial" (font_size 6)))
+	(text "signal_RX_DATA_O[29..0]" (rect 90 0 218 10)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 544 440 831 456)
+	(text "OUTPUT" (rect 1 0 39 9)(font "Arial" (font_size 6)))
+	(text "signal_TX_COMMON_FRAME_O[29..0]" (rect 90 0 281 10)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 160 144 488 256)
+	(text "gwt_rx_descrambler_30bit_new" (rect 5 0 157 10)(font "Arial" ))
+	(text "inst" (rect 8 96 25 106)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "RX_RESET_I" (rect 0 0 64 10)(font "Arial" ))
+		(text "RX_RESET_I" (rect 21 27 85 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RX_FRAMECLK_I" (rect 0 0 88 10)(font "Arial" ))
+		(text "RX_FRAMECLK_I" (rect 21 43 109 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "RX_COMMON_FRAME_I[29..0]" (rect 0 0 154 10)(font "Arial" ))
+		(text "RX_COMMON_FRAME_I[29..0]" (rect 21 59 175 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 328 32)
+		(output)
+		(text "RX_DATA_O[29..0]" (rect 0 0 94 10)(font "Arial" ))
+		(text "RX_DATA_O[29..0]" (rect 228 27 322 37)(font "Arial" ))
+		(line (pt 328 32)(pt 312 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 312 96))
+	)
+)
+(symbol
+	(rect 160 280 528 392)
+	(text "gwt_tx_scrambler_30bit_new" (rect 5 0 145 10)(font "Arial" ))
+	(text "inst2" (rect 8 96 31 106)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "TX_RESET_I" (rect 0 0 62 10)(font "Arial" ))
+		(text "TX_RESET_I" (rect 21 27 83 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RESET_PATTERN_I[29..0]" (rect 0 0 132 10)(font "Arial" ))
+		(text "RESET_PATTERN_I[29..0]" (rect 21 43 153 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "TX_FRAMECLK_I" (rect 0 0 86 10)(font "Arial" ))
+		(text "TX_FRAMECLK_I" (rect 21 59 107 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "TX_DATA_I[29..0]" (rect 0 0 87 10)(font "Arial" ))
+		(text "TX_DATA_I[29..0]" (rect 21 75 108 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 368 32)
+		(output)
+		(text "TX_COMMON_FRAME_O[29..0]" (rect 0 0 156 10)(font "Arial" ))
+		(text "TX_COMMON_FRAME_O[29..0]" (rect 215 27 371 37)(font "Arial" ))
+		(line (pt 368 32)(pt 352 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 352 96))
+	)
+)
+(connector
+	(text "signal_RX_RESET_I" (rect 202 56 301 66)(font "Arial" ))
+	(pt 192 64)
+	(pt 336 64)
+)
+(connector
+	(text "signal_RX_FRAMECLK_I" (rect 202 88 324 98)(font "Arial" ))
+	(pt 192 96)
+	(pt 336 96)
+)
+(connector
+	(text "signal_TX_RESET_I" (rect 58 304 154 314)(font "Arial" ))
+	(pt 160 312)
+	(pt 48 312)
+)
+(connector
+	(text "signal_TX_RESET_I" (rect 186 408 282 418)(font "Arial" ))
+	(pt 176 416)
+	(pt 312 416)
+)
+(connector
+	(text "signal_RESET_PATTERN_I[29..0]" (rect 48 320 214 330)(font "Arial" ))
+	(pt 160 328)
+	(pt 48 328)
+	(bus)
+)
+(connector
+	(text "signal_TX_FRAMECLK_I" (rect 58 336 178 346)(font "Arial" ))
+	(pt 48 344)
+	(pt 160 344)
+)
+(connector
+	(text "signal_TX_FRAMECLK_I" (rect 186 456 306 466)(font "Arial" ))
+	(pt 176 464)
+	(pt 328 464)
+)
+(connector
+	(text "signal_TX_DATA_I[29..0]" (rect 58 352 179 362)(font "Arial" ))
+	(pt 160 360)
+	(pt 48 360)
+	(bus)
+)
+(connector
+	(text "signal_RX_COMMON_FRAME_I[29..0]" (rect -24 200 164 210)(font "Arial" ))
+	(pt -32 208)
+	(pt 160 208)
+	(bus)
+)
+(connector
+	(text "signal_RX_FRAMECLK_I" (rect 58 184 180 194)(font "Arial" ))
+	(pt -32 192)
+	(pt 160 192)
+)
+(connector
+	(text "signal_RX_RESET_I" (rect 58 168 157 178)(font "Arial" ))
+	(pt -32 176)
+	(pt 160 176)
+)
+(connector
+	(pt -32 176)
+	(pt -32 184)
+)
+(connector
+	(pt 656 312)
+	(pt 656 320)
+	(bus)
+)
+(connector
+	(text "signal_RX_DATA_O[29..0]" (rect 498 168 626 178)(font "Arial" ))
+	(pt 488 176)
+	(pt 632 176)
+	(bus)
+)
+(connector
+	(text "signal_TX_COMMON_FRAME_O[29..0]" (rect 528 304 719 314)(font "Arial" ))
+	(pt 528 312)
+	(pt 656 312)
+	(bus)
+)
+(connector
+	(text "signal_RX_COMMON_FRAME_I[29..0]" (rect 192 112 380 122)(font "Arial" ))
+	(pt 192 120)
+	(pt 344 120)
+	(bus)
+)
+(connector
+	(text "signal_RX_DATA_O[29..0]" (rect 442 88 570 98)(font "Arial" ))
+	(pt 552 96)
+	(pt 432 96)
+	(bus)
+)
+(connector
+	(text "signal_RESET_PATTERN_I[29..0]" (rect 178 440 344 450)(font "Arial" ))
+	(pt 168 448)
+	(pt 328 448)
+	(bus)
+)
+(connector
+	(text "signal_TX_DATA_I[29..0]" (rect 178 480 299 490)(font "Arial" ))
+	(pt 168 488)
+	(pt 336 488)
+	(bus)
+)
+(connector
+	(text "signal_TX_COMMON_FRAME_O[29..0]" (rect 384 440 575 450)(font "Arial" ))
+	(pt 544 448)
+	(pt 384 448)
+	(bus)
+)

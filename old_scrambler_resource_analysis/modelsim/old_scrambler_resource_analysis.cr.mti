@@ -1,0 +1,38 @@
+/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambler_top.vhd {1 {vcom -stats=none -work work -2002 -explicit -vopt /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambler_top.vhd
+Model Technology ModelSim SE-64 vcom 10.3a Compiler 2014.04 Apr 13 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity old_scrambler_top
+-- Compiling architecture a of old_scrambler_top
+
+} {} {}} /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambling.vhd {1 {vcom -stats=none -work work -2002 -explicit -vopt /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambling.vhd
+Model Technology ModelSim SE-64 vcom 10.3a Compiler 2014.04 Apr 13 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package NUMERIC_STD
+-- Compiling entity scrambler
+-- Compiling architecture scramble_arch of scrambler
+
+} {} {}} /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/writer.vhd {1 {vcom -stats=none -work work -2002 -explicit -vopt /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/writer.vhd
+Model Technology ModelSim SE-64 vcom 10.3a Compiler 2014.04 Apr 13 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity the_writer
+-- Compiling architecture w of the_writer
+
+} {} {}} /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/read_in_30_bit.vhd {1 {vcom -stats=none -work work -2002 -explicit -vopt /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/read_in_30_bit.vhd
+Model Technology ModelSim SE-64 vcom 10.3a Compiler 2014.04 Apr 13 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity the_reader
+-- Compiling architecture r of the_reader
+
+} {} {}}

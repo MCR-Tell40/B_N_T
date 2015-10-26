@@ -1,0 +1,25 @@
+Fitter Status : Successful - Tue Oct  6 14:54:23 2015
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
+Revision Name : new_scrambler_top
+Top-level Entity Name : new_scrambler_top
+Family : Stratix V
+Device : 5SGXEA7H3F35C3
+Timing Models : Final
+Logic utilization (in ALMs) : 1 / 234,720 ( < 1 % )
+Total registers : 0
+Total pins : 2 / 664 ( < 1 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 52,428,800 ( 0 % )
+Total DSP Blocks : 0 / 256 ( 0 % )
+Total HSSI STD RX PCSs : 0 / 24 ( 0 % )
+Total HSSI 10G RX PCSs : 0 / 24 ( 0 % )
+Total HSSI GEN3 RX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 24 ( 0 % )
+Total HSSI STD TX PCSs : 0 / 24 ( 0 % )
+Total HSSI 10G TX PCSs : 0 / 24 ( 0 % )
+Total HSSI GEN3 TX PCSs : 0 / 24 ( 0 % )
+Total HSSI TX Channels : 0 / 24 ( 0 % )
+Total HSSI PIPE GEN1_2s : 0 / 24 ( 0 % )
+Total HSSI GEN3s : 0 / 24 ( 0 % )
+Total PLLs : 0 / 68 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

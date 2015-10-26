@@ -1,0 +1,110 @@
+#ifndef __scramble_sim_h__
+#define __scramble_sim_h__
+
+#include <bitset>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <assert.h>
+#include <vector>
+
+using namespace std;
+
+typedef bitset<30>  spp;
+typedef bitset<128> frame;
+typedef spp(*FunctionArray)(spp DATA_IN, int spp_id);
+
+//Simulation Functions
+frame str_to_frame         (string)        ;
+spp   frame_to_spp         (frame, int)    ;
+frame attach_spp_to_frame  (frame,spp,int) ;
+spp   Karol_scramble_TX    (spp, int)      ;
+spp   Karol_scramble_RX    (spp, int)      ;
+spp   additive_scramble_TX (spp, int)      ;
+spp   additive_scramble_RX (spp, int)      ;
+
+FunctionArray TX_scramble[]=
+  {
+    Karol_scramble_TX,
+    additive_scramble_TX
+  };
+FunctionArray RX_scramble[]=
+  {
+    Karol_scramble_RX,
+    additive_scramble_RX
+  };
+
+//Main
+int main(int argc, const char * argv[])
+{
+  //Check Command Line Arguments
+  if (argc != 4)
+    {
+      cerr << "Incorrect arguments, please specify input and output files" << endl;
+      cerr << "e.g. $: scramble_analysis <input_file> <additive_scramble_output> <Karol_scramble_output>" << endl;
+      return 1;
+    }
+    
+  //File
+  vector<fstream*> file;
+  for (int i(1); i < argc; i++)
+    file.push_back(new fstream(argv[i]));
+
+  int frame_count(0);
+  while(!file[0]->eof())
+    {     
+      //Frame Handeling
+      vector<frame> data_frame;
+      for (int i(0); i < argc-1; i++) data_frame.push_back(frame());
+
+      //read in one 128bit frame from file
+      string buffer; *file[0] >> buffer;
+      data_frame[0] = str_to_frame(buffer);
+      if(data_frame[0] == 0) break;     
+
+
+      //SPP Handeling
+      vector<spp*> data_spp;
+      for (int i(0); i < data_frame.size(); i++) 
+	data_spp.push_back(new spp[4]);
+
+      // ---- debugging ----
+      frame_count++;
+      if (frame_count % 10000 == 0) cout << frame_count << " | ";
+
+      //attach header and parity info from input to output frames
+      for (int i(1); i < data_frame.size(); i++)
+	for (int j(127); j>=120; j--)
+	  {
+	    data_frame[i][j] = data_frame[0][j];
+	  }
+     
+      //scramble input frame and attach to output frame
+      for(int i(0); i<data_spp.size(); i++)
+	{
+	  if(i==0) //Raw Input
+	    for (int j(0); j<4; j++)
+	      data_spp[i][j] = frame_to_spp(data_frame[0],j);
+	  else //compute scramble algorithums for all spp's
+	    {
+	      for (int j(0); j<4; j++)
+		{
+		data_spp[i][j] = TX_scramble[i-1](data_spp[0][j],j);
+		
+		if (data_spp[0][j] != RX_scramble[i-1](data_spp[i][j],j)) //check TX-RX reversibility
+		  cerr << "data_spp[" << i << "][" << j << "] TX-RX inconsistancy at frame: " << frame_count << endl;
+		
+		data_frame[i] = attach_spp_to_frame(data_frame[i],data_spp[i][j],j);
+		}	    
+	    }
+	}
+
+      //write to out files
+      for (int i(1); i<file.size(); i++)
+	*file[i] << data_frame[i];
+    } //while !eof
+  
+  cout << endl << "scramble_sim: " << frame_count << " frame" << endl;
+}
+
+#endif

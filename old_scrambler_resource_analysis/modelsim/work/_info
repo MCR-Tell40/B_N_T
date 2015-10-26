@@ -1,0 +1,185 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/velo/Documents/B_N_T/new_scrambler_resource_analysis/modelsim
+T_opt
+!s110 1444226036
+VS`b7U?i]Yi_W5Y3Nn1;?F3
+04 9 13 work scrambler scramble_arch 1
+=1-782bcbb0981f-561523f3-8330a-2313
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.3a;59
+R0
+Eold_scrambler_top
+Z1 w1444143019
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 d/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim
+Z6 8/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambler_top.vhd
+Z7 F/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambler_top.vhd
+l0
+L10
+V5@]IkoQ17[M<]CK04@d_b3
+!s100 7l``o<Q5QC?6df5>50<ma2
+Z8 OL;C;10.3a;59
+32
+Z9 !s110 1445350189
+!i10b 1
+Z10 !s108 1445350189.842654
+Z11 !s90 -reportprogress|300|-stats=none|-work|work|-2002|-explicit|-vopt|/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambler_top.vhd|
+Z12 !s107 /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambler_top.vhd|
+!i113 0
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1
+Aa
+R2
+R3
+R4
+DEx4 work 17 old_scrambler_top 0 22 5@]IkoQ17[M<]CK04@d_b3
+l85
+L19
+VgUfMin[=Nkc39=7?1MY9j3
+!s100 YjBo18eCzOnJ14=3dOAe=2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Escrambler
+Z15 w1444144253
+R2
+Z16 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z17 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+R3
+R4
+R5
+Z18 8/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambling.vhd
+Z19 F/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambling.vhd
+l0
+L15
+V0ecW^GUNV?4715]@RVIK@0
+!s100 Yj0CLY7>9gMRMM9>aX;4M3
+R8
+32
+R9
+!i10b 1
+Z20 !s108 1445350189.886342
+Z21 !s90 -reportprogress|300|-stats=none|-work|work|-2002|-explicit|-vopt|/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambling.vhd|
+Z22 !s107 /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/old_scrambling.vhd|
+!i113 0
+R13
+R14
+Ascramble_arch
+R2
+R16
+R17
+R3
+R4
+DEx4 work 9 scrambler 0 22 0ecW^GUNV?4715]@RVIK@0
+l28
+L23
+V<90]Zd`LQhoj>SU4z9iVF0
+!s100 IX[8?BhFXh5Ki9H2h:SR11
+R8
+32
+R9
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R13
+R14
+Ethe_reader
+Z23 w1444303475
+R3
+R4
+R5
+Z24 8/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/read_in_30_bit.vhd
+Z25 F/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/read_in_30_bit.vhd
+l0
+L13
+VJXk[^DETgaY4kR9AK_akf1
+!s100 kMQdGn`BP4LBJ8e0RbQ5n1
+R8
+32
+R9
+!i10b 1
+Z26 !s108 1445350189.926996
+Z27 !s90 -reportprogress|300|-stats=none|-work|work|-2002|-explicit|-vopt|/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/read_in_30_bit.vhd|
+Z28 !s107 /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/read_in_30_bit.vhd|
+!i113 0
+R13
+R14
+Ar
+R3
+R4
+DEx4 work 10 the_reader 0 22 JXk[^DETgaY4kR9AK_akf1
+l39
+L23
+V8DYGT3S=@>nf_7zHoMOIi1
+!s100 `SV`2YE@mPW6FX56mYN6a1
+R8
+32
+R9
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R13
+R14
+Ethe_writer
+Z29 w1444143692
+Z30 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R3
+R4
+R5
+Z31 8/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/writer.vhd
+Z32 F/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/writer.vhd
+l0
+L16
+VW<cTfb<1G_hh9FVnof`QJ0
+!s100 >4bmNWKZk^@G<QcQIV0[X1
+R8
+32
+R9
+!i10b 1
+Z33 !s108 1445350189.957884
+Z34 !s90 -reportprogress|300|-stats=none|-work|work|-2002|-explicit|-vopt|/home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/writer.vhd|
+Z35 !s107 /home/velo/Documents/B_N_T/old_scrambler_resource_analysis/modelsim/writer.vhd|
+!i113 0
+R13
+R14
+Aw
+R30
+R3
+R4
+Z36 DEx4 work 10 the_writer 0 22 W<cTfb<1G_hh9FVnof`QJ0
+l38
+L23
+Z37 V>58OFOc`Z[lWM2Gng=`PP2
+Z38 !s100 zkkGPFHlnd`iWPY4@eicm2
+R8
+32
+R9
+!i10b 1
+R33
+R34
+R35
+!i113 0
+R13
+R14

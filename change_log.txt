@@ -1,0 +1,9 @@
+PUT DOWN ANY PERMANENT CHANGE TO A FOLDER
+
+date - name(s) - What file(s) did you change ? - what did you do? #
+081015 - Ben - B_N_T top level - moved screenshots of scrambler to resourses/screengrabs/scrambler_analysis
+
+
+121015 - Toby - Further debugged and wrote some more of the C++. Removed all errors stopping compilation, but it runs indefinitely and outputs nonsense. Added relevant input and output files for the C++. Pablo added a presentations folder in Documents, and added a load of lateX files including a template for our presentation.
+
+151015 -Nick - scramble_analysis_cpp - Altered the Makefile to relfect the two different datasets, we can now use 'make run_short' and 'make run_full' to compile and run the programs on the small and large datasets respectively. This also means there is a difference in the .root files created to root macros will need to be updated.
