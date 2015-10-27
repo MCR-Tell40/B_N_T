@@ -1,0 +1,200 @@
+
+`timescale 1ns/1ps
+module voter30bits(a, b, c, y);
+
+input [29:0]
+	a,
+	b,
+	c;
+
+output [29:0]
+	y;
+
+wire [29:0]
+	a,
+	b,
+	c,
+	y;
+
+assign
+	y   = a&b | a&c | b&c;
+ 
+endmodule
+
+
+
+module deScramblerFlowControl (
+    // Inputs:
+	input [29:0] frameIn,
+	
+	input deScrambleEnable,
+	input [29:0] state,
+    
+    // Outputs:
+	output reg [29:0] nextState,
+	output reg [29:0] dataOutEval);
+
+	always @(state or frameIn  or deScrambleEnable)
+	begin
+	
+	if (deScrambleEnable == 1'b1)
+	begin
+		dataOutEval[0] = frameIn[0] ^ state[0] ^ state[1] ^ state[15] ^ state[16];
+		dataOutEval[1] = frameIn[1] ^ state[1] ^ state[2] ^ state[16] ^ state[17];
+		dataOutEval[2] = frameIn[2] ^ state[2] ^ state[3] ^ state[17] ^ state[18];
+		dataOutEval[3] = frameIn[3] ^ state[3] ^ state[4] ^ state[18] ^ state[19];
+		dataOutEval[4] = frameIn[4] ^ state[4] ^ state[5] ^ state[19] ^ state[20];
+		dataOutEval[5] = frameIn[5] ^ state[5] ^ state[6] ^ state[20] ^ state[21];
+		dataOutEval[6] = frameIn[6] ^ state[6] ^ state[7] ^ state[21] ^ state[22];
+		dataOutEval[7] = frameIn[7] ^ state[7] ^ state[8] ^ state[22] ^ state[23];
+		dataOutEval[8] = frameIn[8] ^ state[8] ^ state[9] ^ state[23] ^ state[24];
+		dataOutEval[9] = frameIn[9] ^ state[9] ^ state[10] ^ state[24] ^ state[25];
+		dataOutEval[10] = frameIn[10] ^ state[10] ^ state[11] ^ state[25] ^ state[26];
+		dataOutEval[11] = frameIn[11] ^ state[11] ^ state[12] ^ state[26] ^ state[27];
+		dataOutEval[12] = frameIn[12] ^ state[12] ^ state[13] ^ state[27] ^ state[28];
+		dataOutEval[13] = frameIn[13] ^ state[13] ^ state[14] ^ state[28] ^ state[29];
+		dataOutEval[14] = frameIn[14] ^ state[14] ^ state[15] ^ state[29] ^ frameIn[0];
+		dataOutEval[15] = frameIn[15] ^ state[15] ^ state[16] ^ frameIn[0] ^ frameIn[1];
+		dataOutEval[16] = frameIn[16] ^ state[16] ^ state[17] ^ frameIn[1] ^ frameIn[2];
+		dataOutEval[17] = frameIn[17] ^ state[17] ^ state[18] ^ frameIn[2] ^ frameIn[3];
+		dataOutEval[18] = frameIn[18] ^ state[18] ^ state[19] ^ frameIn[3] ^ frameIn[4];
+		dataOutEval[19] = frameIn[19] ^ state[19] ^ state[20] ^ frameIn[4] ^ frameIn[5];
+		dataOutEval[20] = frameIn[20] ^ state[20] ^ state[21] ^ frameIn[5] ^ frameIn[6];
+		dataOutEval[21] = frameIn[21] ^ state[21] ^ state[22] ^ frameIn[6] ^ frameIn[7];
+		dataOutEval[22] = frameIn[22] ^ state[22] ^ state[23] ^ frameIn[7] ^ frameIn[8];
+		dataOutEval[23] = frameIn[23] ^ state[23] ^ state[24] ^ frameIn[8] ^ frameIn[9];
+		dataOutEval[24] = frameIn[24] ^ state[24] ^ state[25] ^ frameIn[9] ^ frameIn[10];
+		dataOutEval[25] = frameIn[25] ^ state[25] ^ state[26] ^ frameIn[10] ^ frameIn[11];
+		dataOutEval[26] = frameIn[26] ^ state[26] ^ state[27] ^ frameIn[11] ^ frameIn[12];
+		dataOutEval[27] = frameIn[27] ^ state[27] ^ state[28] ^ frameIn[12] ^ frameIn[13];
+		dataOutEval[28] = frameIn[28] ^ state[28] ^ state[29] ^ frameIn[13] ^ frameIn[14];
+		dataOutEval[29] = frameIn[29] ^ state[29] ^ frameIn[0] ^ frameIn[14] ^ frameIn[15];
+		nextState = frameIn;
+	end
+	else
+	begin
+		dataOutEval = frameIn;
+		nextState = state;
+	end
+	end
+endmodule
+    
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------- //
+
+
+module deScramblerInitializationRegisters (
+    input wire clock,
+	input wire reset,
+    input wire [29:0] nextStateA, nextStateB, nextStateC,
+    input wire [29:0] dataOutEvalA, dataOutEvalB, dataOutEvalC,
+
+    output reg [29:0] state,
+    output reg [29:0] rxDataOut
+    );
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------- //
+
+wire [29:0] nextState;
+wire [29:0] dataOutEval;
+
+voter30bits V30B1(.a(nextStateA), .b(nextStateB), .c(nextStateC), .y(nextState));
+voter30bits V30B2(.a(dataOutEvalA), .b(dataOutEvalB), .c(dataOutEvalC), .y(dataOutEval));
+
+always @(negedge clock or negedge reset)
+    begin
+		if (reset == 1'b0)
+		begin
+			state <= 30'b101010101010101010101010101010;
+			rxDataOut <= 30'b000000000000000000000000000000;
+		end
+		else
+		begin
+			state <= nextState;
+			rxDataOut <= dataOutEval;
+		end
+    end
+
+
+endmodule
+
+module deScramblerTopModule (
+    input clockA, clockB, clockC,
+    input resetA, resetB, resetC,
+    input deScrambleEnableA, deScrambleEnableB, deScrambleEnableC,
+    input wire [29:0] frameInA, frameInB, frameInC,
+    // Outputs:
+    output wire [29:0] rxDataOut
+);
+
+wire [29:0] stateA, stateB, stateC;
+wire [29:0] nextStateA, nextStateB, nextStateC;
+wire [29:0] dataOutEvalA, dataOutEvalB, dataOutEvalC;
+wire [29:0] rxDataOutA, rxDataOutB, rxDataOutC;
+
+deScramblerFlowControl FC1(
+    .frameIn(frameInA),
+    
+    .deScrambleEnable(deScrambleEnableA),
+    .state(stateA),
+    
+    // Outputs:
+    .nextState(nextStateA),
+    .dataOutEval(dataOutEvalA)
+    );
+deScramblerFlowControl FC2(
+    .frameIn(frameInB),
+    
+    .deScrambleEnable(deScrambleEnableB),
+    .state(stateB),
+    
+    // Outputs:
+    .nextState(nextStateB),
+    .dataOutEval(dataOutEvalB)
+    );
+
+deScramblerFlowControl FC3(
+    .frameIn(frameInC),
+    
+    .deScrambleEnable(deScrambleEnableC),
+    .state(stateC),
+    
+    // Outputs:
+    .nextState(nextStateC),
+    .dataOutEval(dataOutEvalC)
+    );
+
+deScramblerInitializationRegisters IR1(
+    .clock(clockA),
+	.reset(resetA),
+    .nextStateA(nextStateA), .nextStateB(nextStateB), .nextStateC(nextStateC),
+     .dataOutEvalA(dataOutEvalA), .dataOutEvalB(dataOutEvalB), .dataOutEvalC(dataOutEvalC),
+    .state(stateA),
+    .rxDataOut(rxDataOutA)
+    );
+
+deScramblerInitializationRegisters IR2(
+    .clock(clockB),
+	.reset(resetB),
+    .nextStateA(nextStateB), .nextStateB(nextStateC), .nextStateC(nextStateA),
+    .dataOutEvalA(dataOutEvalB), .dataOutEvalB(dataOutEvalC), .dataOutEvalC(dataOutEvalA),
+    .state(stateB),
+    .rxDataOut(rxDataOutB)
+    );
+
+deScramblerInitializationRegisters IR3(
+    .clock(clockC),
+	.reset(resetC),
+    .nextStateA(nextStateC), .nextStateB(nextStateA), .nextStateC(nextStateB),
+    .dataOutEvalA(dataOutEvalC), .dataOutEvalB(dataOutEvalA), .dataOutEvalC(dataOutEvalB),
+    .state(stateC),
+    .rxDataOut(rxDataOutC)
+    );
+
+voter30bits V30B1(.a(rxDataOutA), .b(rxDataOutB), .c(rxDataOutC), .y(rxDataOut));
+
+endmodule
