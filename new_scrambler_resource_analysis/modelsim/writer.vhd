@@ -50,7 +50,7 @@ BEGIN
 
     
   begin
-    full_file_path := "/home/velo/Documents/B_N_T/new_scrambler_resource_analysis/modelsim/" & file_name;
+    full_file_path := "./" & file_name;
     
     file_open(file_pointer,full_file_path,WRITE_MODE);
      ------------- reset ------------		   
