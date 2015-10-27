@@ -3,6 +3,7 @@
 
 #... but the next files:
 !desync9X.txt
+!desyncFilter.txt
 
 # Modelsim
 !*.vhd
