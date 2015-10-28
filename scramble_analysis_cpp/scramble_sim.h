@@ -1,3 +1,4 @@
+
 #ifndef __scramble_sim_h__
 #define __scramble_sim_h__
 
@@ -8,7 +9,7 @@
 #include <assert.h>
 #include <vector>
 
-#define __debug_mode__
+//#define __debug_mode__
 
 using namespace std;
 
@@ -103,7 +104,7 @@ int main(int argc, const char * argv[])
 		data_spp[i][j] = TX_scramble[i-1](data_spp[0][j],j);
 		
 		if (data_spp[0][j] != RX_scramble[i-1](data_spp[i][j],j)) //check TX-RX reversibility
-		  cerr << "data_spp[" << i << "][" << j << "] TX-RX inconsistancy at frame: " << frame_count << endl;
+		  cerr << "data_spp[" << i << "][" << j << "] TX-RX inconsistancy at frame: " << frame_count << " SSP:" << j << endl;
 		
 		data_frame[i] = attach_spp_to_frame(data_frame[i],data_spp[i][j],j);
 		
