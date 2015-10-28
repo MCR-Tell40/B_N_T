@@ -29,20 +29,20 @@ FunctionArray TX_scramble[]=
   {
     Karol_scramble_TX,
     additive_scramble_TX,
-    VeloPix_scramble_TX
+    //VeloPix_scramble_TX
   };
 FunctionArray RX_scramble[]=
   {
     Karol_scramble_RX,
     additive_scramble_RX,
-    VeloPix_scramble_RX
+    //VeloPix_scramble_RX
   };
 
 //Main
 int main(int argc, const char * argv[])
 {
   //Check Command Line Arguments
-  if (argc != 5)
+  if (argc != 4)
     {
       cerr << "Incorrect arguments, please specify input and output files" << endl;
       cerr << "e.g. $: scramble_analysis <input_file> <Karol_scramble_output> <additive_scramble_output> <VeloPix_scramble_output>" << endl;
