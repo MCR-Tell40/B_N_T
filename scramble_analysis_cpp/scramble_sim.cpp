@@ -123,7 +123,6 @@ spp  additive_scramble_TX(spp DATA_IN, int i)
   static spp COMMON_FRAME_2_TX [4] = {0,0,0,0};
   spp DATA_OUT(0);
 
-  cout << "COMMON_FRAME_1_TX =" << COMMON_FRAME_1_TX[1] << endl;
 
 
   COMMON_FRAME_2_TX[i][0 ] = COMMON_FRAME_1_TX[i][0 ] ^ COMMON_FRAME_1_TX[i][29];
@@ -263,4 +262,107 @@ spp  additive_scramble_RX(spp DATA_IN, int i)
   COMMON_FRAME_1_RX[i] = COMMON_FRAME_2_RX[i];
     
   return DATA_OUT;
+
 }
+
+
+
+spp VeloPix_scramble_TX(spp frameIn, int i)
+{
+  int initial_value = 0x2AAAAAAA;
+  static spp state [4] = {initial_value,initial_value,initial_value,initial_value};
+  // static spp COMMON_FRAME_2_TX [4] = {0,0,0,0};
+  
+  spp dataOutEval(0);
+
+  dataOutEval[0]  = frameIn[0]  ^ state[i][0]  ^ state[i][1]  ^ state[i][15] ^ state[i][16];
+  dataOutEval[1]  = frameIn[1]  ^ state[i][1]  ^ state[i][2]  ^ state[i][16] ^ state[i][17];
+  dataOutEval[2]  = frameIn[2]  ^ state[i][2]  ^ state[i][3]  ^ state[i][17] ^ state[i][18];
+  dataOutEval[3]  = frameIn[3]  ^ state[i][3]  ^ state[i][4]  ^ state[i][18] ^ state[i][19];
+  dataOutEval[4]  = frameIn[4]  ^ state[i][4]  ^ state[i][5]  ^ state[i][19] ^ state[i][20];
+  dataOutEval[5]  = frameIn[5]  ^ state[i][5]  ^ state[i][6]  ^ state[i][20] ^ state[i][21];
+  dataOutEval[6]  = frameIn[6]  ^ state[i][6]  ^ state[i][7]  ^ state[i][21] ^ state[i][22];
+  dataOutEval[7]  = frameIn[7]  ^ state[i][7]  ^ state[i][8]  ^ state[i][22] ^ state[i][23];
+  dataOutEval[8]  = frameIn[8]  ^ state[i][8]  ^ state[i][9]  ^ state[i][23] ^ state[i][24];
+  dataOutEval[9]  = frameIn[9]  ^ state[i][9]  ^ state[i][10] ^ state[i][24] ^ state[i][25];
+  dataOutEval[10] = frameIn[10] ^ state[i][10] ^ state[i][11] ^ state[i][25] ^ state[i][26];
+  dataOutEval[11] = frameIn[11] ^ state[i][11] ^ state[i][12] ^ state[i][26] ^ state[i][27];
+  dataOutEval[12] = frameIn[12] ^ state[i][12] ^ state[i][13] ^ state[i][27] ^ state[i][28];
+  dataOutEval[13] = frameIn[13] ^ state[i][13] ^ state[i][14] ^ state[i][28] ^ state[i][29];
+  dataOutEval[14] = frameIn[14] ^ state[i][14] ^ state[i][15] ^ state[i][29] ^ frameIn[0];
+  dataOutEval[15] = frameIn[15] ^ state[i][15] ^ state[i][16] ^ frameIn[0]   ^ frameIn[1];
+  dataOutEval[16] = frameIn[16] ^ state[i][16] ^ state[i][17] ^ frameIn[1]   ^ frameIn[2];
+  dataOutEval[17] = frameIn[17] ^ state[i][17] ^ state[i][18] ^ frameIn[2]   ^ frameIn[3];
+  dataOutEval[18] = frameIn[18] ^ state[i][18] ^ state[i][19] ^ frameIn[3]   ^ frameIn[4];
+  dataOutEval[19] = frameIn[19] ^ state[i][19] ^ state[i][20] ^ frameIn[4]   ^ frameIn[5];
+  dataOutEval[20] = frameIn[20] ^ state[i][20] ^ state[i][21] ^ frameIn[5]   ^ frameIn[6];
+  dataOutEval[21] = frameIn[21] ^ state[i][21] ^ state[i][22] ^ frameIn[6]   ^ frameIn[7];
+  dataOutEval[22] = frameIn[22] ^ state[i][22] ^ state[i][23] ^ frameIn[7]   ^ frameIn[8];
+  dataOutEval[23] = frameIn[23] ^ state[i][23] ^ state[i][24] ^ frameIn[8]   ^ frameIn[9];
+  dataOutEval[24] = frameIn[24] ^ state[i][24] ^ state[i][25] ^ frameIn[9]   ^ frameIn[10];
+  dataOutEval[25] = frameIn[25] ^ state[i][25] ^ state[i][26] ^ frameIn[10]  ^ frameIn[11];
+  dataOutEval[26] = frameIn[26] ^ state[i][26] ^ state[i][27] ^ frameIn[11]  ^ frameIn[12];
+  dataOutEval[27] = frameIn[27] ^ state[i][27] ^ state[i][28] ^ frameIn[12]  ^ frameIn[13];
+  dataOutEval[28] = frameIn[28] ^ state[i][28] ^ state[i][29] ^ frameIn[13]  ^ frameIn[14];
+  dataOutEval[29] = frameIn[29] ^ state[i][29] ^ frameIn[0]   ^ frameIn[14]  ^ frameIn[15];
+ 
+  state[i]=frameIn;
+
+#ifdef __debug_mode__
+  cout << "velopix TX:" << dataOutEval << endl;
+#endif
+
+ 
+  return dataOutEval;
+}
+
+spp  VeloPix_scramble_RX(spp frameIn, int i)
+{
+
+  int initial_value = 0x2AAAAAAA;
+  static spp state [4] = {initial_value,initial_value,initial_value,initial_value};
+  // static spp COMMON_FRAME_2_TX [4] = {0,0,0,0};
+  
+  spp dataOutEval(0);
+
+  dataOutEval[0]  = frameIn[0]  ^ state[i][0]  ^ state[i][1]  ^ state[i][15] ^ state[i][16];
+  dataOutEval[1]  = frameIn[1]  ^ state[i][1]  ^ state[i][2]  ^ state[i][16] ^ state[i][17];
+  dataOutEval[2]  = frameIn[2]  ^ state[i][2]  ^ state[i][3]  ^ state[i][17] ^ state[i][18];
+  dataOutEval[3]  = frameIn[3]  ^ state[i][3]  ^ state[i][4]  ^ state[i][18] ^ state[i][19];
+  dataOutEval[4]  = frameIn[4]  ^ state[i][4]  ^ state[i][5]  ^ state[i][19] ^ state[i][20];
+  dataOutEval[5]  = frameIn[5]  ^ state[i][5]  ^ state[i][6]  ^ state[i][20] ^ state[i][21];
+  dataOutEval[6]  = frameIn[6]  ^ state[i][6]  ^ state[i][7]  ^ state[i][21] ^ state[i][22];
+  dataOutEval[7]  = frameIn[7]  ^ state[i][7]  ^ state[i][8]  ^ state[i][22] ^ state[i][23];
+  dataOutEval[8]  = frameIn[8]  ^ state[i][8]  ^ state[i][9]  ^ state[i][23] ^ state[i][24];
+  dataOutEval[9]  = frameIn[9]  ^ state[i][9]  ^ state[i][10] ^ state[i][24] ^ state[i][25];
+  dataOutEval[10] = frameIn[10] ^ state[i][10] ^ state[i][11] ^ state[i][25] ^ state[i][26];
+  dataOutEval[11] = frameIn[11] ^ state[i][11] ^ state[i][12] ^ state[i][26] ^ state[i][27];
+  dataOutEval[12] = frameIn[12] ^ state[i][12] ^ state[i][13] ^ state[i][27] ^ state[i][28];
+  dataOutEval[13] = frameIn[13] ^ state[i][13] ^ state[i][14] ^ state[i][28] ^ state[i][29];
+  dataOutEval[14] = frameIn[14] ^ state[i][14] ^ state[i][15] ^ state[i][29] ^ frameIn[0];
+  dataOutEval[15] = frameIn[15] ^ state[i][15] ^ state[i][16] ^ frameIn[0]   ^ frameIn[1];
+  dataOutEval[16] = frameIn[16] ^ state[i][16] ^ state[i][17] ^ frameIn[1]   ^ frameIn[2];
+  dataOutEval[17] = frameIn[17] ^ state[i][17] ^ state[i][18] ^ frameIn[2]   ^ frameIn[3];
+  dataOutEval[18] = frameIn[18] ^ state[i][18] ^ state[i][19] ^ frameIn[3]   ^ frameIn[4];
+  dataOutEval[19] = frameIn[19] ^ state[i][19] ^ state[i][20] ^ frameIn[4]   ^ frameIn[5];
+  dataOutEval[20] = frameIn[20] ^ state[i][20] ^ state[i][21] ^ frameIn[5]   ^ frameIn[6];
+  dataOutEval[21] = frameIn[21] ^ state[i][21] ^ state[i][22] ^ frameIn[6]   ^ frameIn[7];
+  dataOutEval[22] = frameIn[22] ^ state[i][22] ^ state[i][23] ^ frameIn[7]   ^ frameIn[8];
+  dataOutEval[23] = frameIn[23] ^ state[i][23] ^ state[i][24] ^ frameIn[8]   ^ frameIn[9];
+  dataOutEval[24] = frameIn[24] ^ state[i][24] ^ state[i][25] ^ frameIn[9]   ^ frameIn[10];
+  dataOutEval[25] = frameIn[25] ^ state[i][25] ^ state[i][26] ^ frameIn[10]  ^ frameIn[11];
+  dataOutEval[26] = frameIn[26] ^ state[i][26] ^ state[i][27] ^ frameIn[11]  ^ frameIn[12];
+  dataOutEval[27] = frameIn[27] ^ state[i][27] ^ state[i][28] ^ frameIn[12]  ^ frameIn[13];
+  dataOutEval[28] = frameIn[28] ^ state[i][28] ^ state[i][29] ^ frameIn[13]  ^ frameIn[14];
+  dataOutEval[29] = frameIn[29] ^ state[i][29] ^ frameIn[0]   ^ frameIn[14]  ^ frameIn[15];
+ 
+  state[i]=frameIn;
+
+#ifdef __debug_mode__
+  cout << "velopix RX:" << dataOutEval << endl;
+#endif
+
+  return dataOutEval;
+}
+
+

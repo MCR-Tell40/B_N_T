@@ -8,6 +8,8 @@
 #include <assert.h>
 #include <vector>
 
+#define __debug_mode__
+
 using namespace std;
 
 typedef bitset<30>  spp;
@@ -29,20 +31,20 @@ FunctionArray TX_scramble[]=
   {
     Karol_scramble_TX,
     additive_scramble_TX,
-    //VeloPix_scramble_TX
+    VeloPix_scramble_TX
   };
 FunctionArray RX_scramble[]=
   {
     Karol_scramble_RX,
     additive_scramble_RX,
-    //VeloPix_scramble_RX
+    VeloPix_scramble_RX
   };
 
 //Main
 int main(int argc, const char * argv[])
 {
   //Check Command Line Arguments
-  if (argc != 4)
+  if (argc != 5)
     {
       cerr << "Incorrect arguments, please specify input and output files" << endl;
       cerr << "e.g. $: scramble_analysis <input_file> <Karol_scramble_output> <additive_scramble_output> <VeloPix_scramble_output>" << endl;
@@ -84,24 +86,30 @@ int main(int argc, const char * argv[])
 	  }
      
       //scramble input frame and attach to output frame
-      for(int i(0); i<data_spp.size(); i++)
-	{
-	  if(i==0) //Raw Input
-	    for (int j(0); j<4; j++)
+      for (int j(0); j<4; j++)
+	for(int i(0); i<data_spp.size(); i++)
+	  {
+	    if(i==0) //Raw Input
+	      {
+	      
 	      data_spp[i][j] = frame_to_spp(data_frame[0],j);
-	  else //compute scramble algorithums for all spp's
-	    {
-	      for (int j(0); j<4; j++)
-		{
+#ifdef __debug_mode__
+	    cout << "desync9x:  " << data_spp[0][j] << endl;
+#endif
+	      }
+	    else //compute scramble algorithums for all spp's
+	      {
+		
 		data_spp[i][j] = TX_scramble[i-1](data_spp[0][j],j);
 		
 		if (data_spp[0][j] != RX_scramble[i-1](data_spp[i][j],j)) //check TX-RX reversibility
 		  cerr << "data_spp[" << i << "][" << j << "] TX-RX inconsistancy at frame: " << frame_count << endl;
 		
 		data_frame[i] = attach_spp_to_frame(data_frame[i],data_spp[i][j],j);
-		}	    
-	    }
-	}
+		
+	      }	    
+	  }
+      
 
       //write to out files
       for (int i(1); i<file.size(); i++)
